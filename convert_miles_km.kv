@@ -1,0 +1,21 @@
+BoxLayout:
+    orientation: 'vertical'
+    TextInput:
+        id: convert
+        text: '7'
+        font_size: 48
+        multiline: False
+    Button:
+        text: 'Convert m to km'
+        # the following line specifies the function in the app class to call when the button is pressed
+        on_press: app.handle_calculate(float(convert.text))
+    Label:
+        id: output_label
+        font_size: 48
+        color: (0, 1, 1, 1)
+    Button:
+        text: 'Up'
+        on_press: app.handle_increment_add(float(convert.text))
+    Button:
+        text: 'Down'
+        on_press: app.handle_increment_sub(float(convert.text))
